@@ -1,12 +1,12 @@
 <template>
-    <div class="footer">
+    <footer class="footer">
     <p class="logo_footer">
         ForeignSkill
     </p>
     <p class="rights">
         © all rights reserved
     </p>
-    </div>
+    </footer>
 </template>
 
 <style scoped>

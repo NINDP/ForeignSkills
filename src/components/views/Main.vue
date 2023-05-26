@@ -16,7 +16,7 @@ export default {
     </section>
     <hr class="line_top" color="white" />
     <p class="text">Изучение иностранных языков дает огромное количество преимуществ: </p>
-    <div class="contentMain">
+    <section class="contentMain">
         <hr class="line" color="grey" />
         <div class="title-top">
             <h2 class="left">
@@ -32,8 +32,8 @@ export default {
         </h2>
 
         <hr class="line_two" color="grey" />
-    </div>
-    <div class="three">
+    </section>
+    <section class="three">
         <div class="content_three">
             <img class="img_test" src="../icons/test.png" />
             <div class="text_three">
@@ -48,8 +48,8 @@ export default {
         </div>
         <hr class="line_three" color="grey" />
 
-    </div>
-    <div class="three">
+    </section>
+    <section class="three">
         <div class="content_three">
             <div class="text_four">
                 <h2 class="title_two">
@@ -63,7 +63,7 @@ export default {
         </div>
         <hr class="line_three" color="grey" />
 
-    </div>
+    </section>
 </template>
 
 <style scoped>

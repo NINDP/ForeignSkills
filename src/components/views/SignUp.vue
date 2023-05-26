@@ -1,13 +1,12 @@
 <template>
     <section class="contentt">
         <section class="content">
-            <div class="center">
+            <section class="center">
                 <div v-if="errorMsg">
                     <p>{{ errorMsg }}</p>
                 </div>
                 <form class="popup" @submit.prevent="register">
                     <h1>Регистрация</h1>
-                    <div class="inp">
                         <h2>
                             Nickname
                         </h2>
@@ -24,16 +23,13 @@
                         <h2 for="confirmPassword">Подтвердите пароль</h2>
                         <input type="password" placeholder="Подтвердите пароль" required id="confirmPassword"
                             v-model="confirmPassword">
-                    </div>
-                    <div>
                         <p>Если у вас уже есть аккаунт
                             <router-link to="/login" class="link">войдите</router-link>
                         </p>
                         <!-- <Button @click="close" class="button">ЗАРЕГИСТРИРОВАТЬСЯ</Button> -->
                         <Button type="submit" class="button"> ЗАРЕГИСТРИРОВАТЬСЯ</Button>
-                    </div>
                 </form>
-            </div>
+            </section>
         </section>
     </section>
     <hr class="line_login" />

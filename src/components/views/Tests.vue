@@ -56,25 +56,20 @@ onMounted(() => {
 <template>
     <section class="tests">
         <section class="contentTests">
-            <div class="rubrics">
+            <section class="rubrics">
                 <div class="rubric">
                     <Link v-for="rubric in rubrics" :name="rubric.name" v-bind:key="rubric.id" :class="{ isActive: active }"
                         @click="getTestForRubric(rubric.id)" class="link">
                     <p>{{ rubric.name }}</p>
                     </Link>
                 </div>
-            </div>
+            </section>
             <hr class="line_tests" />
-            <!-- <select v-model="selectedTests" class="levels">
-                <option selected="selected" disabled value="">Выберите уровень</option> -->
-            <!-- <option :options="levels" v-for="level in levels" :name="level.name" :key="level.id"  :value="level.id">
-                    <select v-model="selected">{{ level.name }}</select></option>
-            </select> -->
-            <div class="tests_test">
+            <section class="tests_test">
                 <Test v-for="test in tests" v-bind:key="test.id" :name="test.name" :img="test.photo" :count="test.count"
                     :id="test.id">
                 </Test>
-            </div>
+            </section>
         </section>
     </section>
 </template>

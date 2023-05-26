@@ -4,26 +4,18 @@ import Form from '../Form.vue';
 </script>
 
 <template>
-    <div class="student">
-    </div>
 
-    <div class="students">
+    <section class="students">
         <h1 class="setting">Настройки профиля</h1>
         <hr class="line_student" />
-        <div class="profile">
-            <div class="profile_left">
-                <img class="photo_profile" src="../icons/logob.png" />
-            </div>
-            <div class="profile_right">
+        <section class="profile">
+                 <img class="photo_profile" src="../icons/logob.png" />
+            <section class="profile_right">
                 <Form></Form>
-            </div>
-            <div>
-            </div>
-        </div>
+            </section>
+        </section>
         <hr class="line" />
-        <div class="profile_bottom">
-        </div>
-    </div>
+    </section>
 </template>
 
 <style scoped>

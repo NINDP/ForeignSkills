@@ -31,26 +31,19 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="cards_pages">
-        <div class="content_cards">
-            <div class="rubrics">
-                <div class="rubric">
-                    <Link v-for="rubric in rubrics" :name="rubric.name" v-bind:key="rubric.id" :class="{ isActive: active }"
-                        @click="getCardsForRubric(rubric.id)" class="link">
-                    <p class="p_rubric">{{ rubric.name }}</p>
-                    </Link>
-                </div>
-                <hr class="line_cards" />
-            </div>
-            <div class="cards">
-                <Card :name="card.name" :translation="card.translation" v-for="card in cards" v-bind:key="card.id">
-                </Card>
-            </div>
-        </div>
-    </div>
+    <section class="content_cards">
+        <section class="rubrics">
+            <Link v-for="rubric in rubrics" :name="rubric.name" v-bind:key="rubric.id" :class="{ isActive: active }"
+                @click="getCardsForRubric(rubric.id)" class="link">
+            <p class="p_rubric">{{ rubric.name }}</p>
+            </Link>
+            <hr class="line_cards" />
+        </section>
+        <section class="cards">
+            <Card :name="card.name" :translation="card.translation" v-for="card in cards" v-bind:key="card.id">
+            </Card>
+        </section>
+    </section>
 </template>
 
-<style scoped>
-
-
-</style>
+<style scoped></style>

@@ -3,8 +3,8 @@
         <h1 class="title_testpage">
             Тест на тему {{ test.name }}
         </h1>
-        <div class="test_page">
-            <div class="question" v-for="(question, index) in questions" v-if="questionIndex < test.count">
+        <section class="test_page">
+            <section class="question" v-for="(question, index) in questions" v-if="questionIndex < test.count">
                 <div v-show="index == questionIndex">
                     <p>Вопрос {{ questionIndex + 1 }} из {{ test.count }}</p>
                     <p>{{ question.content }}</p>
@@ -15,18 +15,18 @@
                             @change="answered" v-model="selectedAnswer" :disabled="selectedAnswer != ''">
                     </label>
                 </div>
-            </div>
+            </section>
 
-            <div class="result_answered" v-if="isSelectedCorrect">
-                    Правильно!
-                </div>
+            <p class="result_answered" v-if="isSelectedCorrect">
+                Правильно!
+            </p>
 
-                <div class="result_answered" v-if="isSelectedWrong">
-                    Неправильно!
-                </div>
+            <p class="result_answered" v-if="isSelectedWrong">
+                Неправильно!
+            </p>
 
 
-            <div class="results" v-if="questionIndex == test.count">
+            <section class="results" v-if="questionIndex == test.count">
                 <p>
                     Количество правильных ответов:
                     <span>{{ correctAnswer }}</span>
@@ -44,16 +44,16 @@
                         Вернуться к тестам
                     </Button>
                 </router-link>
-            </div>
-            <div>
+            </section>
+            <section>
                 <Button class="btn" @click="nextQuestion" v-show="selectedAnswer != '' && questionIndex < test.count - 1">
                     Следующий вопрос
                 </Button>
                 <Button class="btn" v-show="selectedAnswer != '' && questionIndex == test.count - 1" @click="showResults">
                     К результату!
                 </Button>
-            </div>
-        </div>
+            </section>
+        </section>
     </section>
 </template>
 
@@ -86,14 +86,14 @@ export default {
         },
         nextQuestion() {
             this.isSelectedCorrect = false,
-            this.isSelectedWrong = false,
-            this.questionIndex++
+                this.isSelectedWrong = false,
+                this.questionIndex++
             this.selectedAnswer = ''
         },
         showResults() {
             this.isSelectedCorrect = false,
-            this.isSelectedWrong = false,
-            this.questionIndex++;
+                this.isSelectedWrong = false,
+                this.questionIndex++;
             let array = this.arrayCorrectAnswers[0];
             array.forEach(element =>
                 this.selectedUserAnswers.includes(element) ? this.correctAnswer++ : this.wrongAnswer++)
@@ -232,7 +232,7 @@ getQuestions(route.params.id)
     font-size: 30px;
 }
 
-.result_answered{
-    font-size:  30px;
+.result_answered {
+    font-size: 30px;
 }
 </style>

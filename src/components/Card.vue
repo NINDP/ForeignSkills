@@ -23,20 +23,20 @@ export default {
 </script>
 
 <template>
-    <div :style="`--rotation-duration: ${rotationDuration}ms`" :class="{ clicked }" @click="rotate" name="mode-fade"
+    <section :style="`--rotation-duration: ${rotationDuration}ms`" :class="{ clicked }" @click="rotate" name="mode-fade"
         mode="out-in" key="front" v-if="on" class="card">
         <div class="card_content">
             <p class="name">{{ name }}</p>
             <p class="ps">Кликните по карточке, чтобы увидеть перевод</p>
         </div>
-    </div>
+    </section>
 
-    <div :class="{ clicked }" @click="rotate" key="back" v-else class="card" to="/cardFamily">
+    <section :class="{ clicked }" @click="rotate" key="back" v-else class="card" to="/cardFamily">
         <div :class="{ clickedText }" class="card_content">
             <p class="translation"> {{ translation }}</p>
             <p class="ps">Кликните по карточке, чтобы увидеть перевод</p>
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped>

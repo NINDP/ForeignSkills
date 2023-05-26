@@ -1,8 +1,8 @@
 <template>
-    <div class="inputы">
+    <section class="inputs">
     <slot></slot>
     <input class="input" type="text"/>
-    </div>
+    </section>
 </template>
 
 <style>
