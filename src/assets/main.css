@@ -161,6 +161,7 @@ h2 {
 /* cards */
 .content_cards {
     padding: 0px 100px;
+    min-height: 72vh;
 }
 
 .rubrics {

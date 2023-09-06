@@ -54,7 +54,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section class="tests">
+    <section class="testsMain">
         <section class="contentTests">
             <section class="rubrics">
                 <div class="rubric">
@@ -75,6 +75,9 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.testsMain{
+    min-height:72vh;
+}
 .contentTests {
     margin: 0px 100px;
 }

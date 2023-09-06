@@ -179,7 +179,6 @@ getQuestions(route.params.id)
     font-size: 24px;
     border: 2px solid #6EA0D6;
     background-color: white;
-    margin: 50px 40px 0px;
     border-radius: 30px;
     padding: 15px 50px;
 }
